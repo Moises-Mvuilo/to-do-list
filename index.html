@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Este aplicativo tem como finalidade de adicionar, atualizar e excluir tarefas"
+    />
+    <meta name="author" content="Eng. Matukondele Mvuilo Moisés" />
+    <meta name="keywords" content="adicionar, atualizar e excluir" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>to do list</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="head">TO DO LIST => (LISTA DE TAREFA)</h1>
+
+      <!--Lista de tarefas-->
+      <div class="codeblock">
+        <p id="validation"></p>
+        <input
+          class="input-task"
+          type="text"
+          name="name"
+          placeholder="O que tenho que fazer..."
+        />
+        <button class="button-add-task">Adicionar</button>
+
+        <ul class="list-tasks"></ul>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="flex">
+        <div class="text">
+          <p class="text-1">Desenvolvido por Engº. Matukondele Mvuilo Moisés</p>
+          <p>&copy; 2025 - Todos os direitos reservados</p>
+        </div>
+
+        <div class="icon">
+          <a
+            class="logo"
+            href="https://www.facebook.com/matukondelemvuilo.moises"
+            target="_blank"
+          >
+            <i class="bi bi-facebook" title="Facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/mvuilo_moises/"
+            class="logo"
+            target="_blank"
+          >
+            <i class="bi bi-instagram" title="Instagram"></i
+          ></a>
+          <a href="https://wa.me/351915143745" class="logo" target="_blank">
+            <i class="bi bi-whatsapp" title="WhatsApp"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
