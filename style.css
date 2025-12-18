@@ -149,6 +149,13 @@ img {
 
 /*Responsividade 567px*/
 @media (max-width: 567px) {
+  .codeblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
   .head {
     font-size: 1.5rem;
   }
@@ -158,11 +165,12 @@ img {
 
   .codeblock {
     width: 100%;
-    padding: 1rem;
+    padding: 0;
+    margin: 0;
   }
 
   .input-task {
-    width: 55%;
+    width: 22rem;
   }
 
   .flex {
