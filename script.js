@@ -5,24 +5,22 @@ const validation = document.getElementById("validation");
 
 let myItemList = [];
 
-function addNewTaskt() {
+function addNewTask() {
+  if (input.value.trim() === "") {
+    validation.innerHTML = "Por favor, insira uma tarefa!";
+    validation.style.color = "red";
+    validation.style.fontSize = ".8rem";
+    return;
+  }
+
+  validation.innerHTML = "";
+
   myItemList.push({
     task: input.value,
     finish: false,
   });
 
-  if (input.value === "") {
-    validation.innerHTML = "Por favor, insira uma tarefa!";
-    validation.style.color = "red";
-    validation.style.fontSize = ".8rem";
-    myItemList.pop();
-    return;
-  } else {
-    validation.innerHTML = "";
-  }
-
   input.value = "";
-
   showTasks();
 }
 
@@ -42,7 +40,6 @@ function showTasks() {
   });
 
   completeList.innerHTML = newLi;
-  localStorage.setItem("list", JSON.stringify(myItemList));
 }
 
 function taskFinish(position) {
@@ -55,13 +52,4 @@ function deleteItem(position) {
   showTasks();
 }
 
-//local storage
-function loadingTasks() {
-  const localStorageOfTasks = localStorage.getItem("list");
-  myItemList = JSON.parse(localStorageOfTasks);
-
-  showTasks();
-}
-loadingTasks();
-
-button.addEventListener("click", addNewTaskt);
+button.addEventListener("click", addNewTask);
